@@ -1,0 +1,7 @@
+# Isolated diagnostic environment for the existing host CANN 8.5.0.
+# Separate from the vLLM container; never install into system Python.
+torch==2.9.0
+torch-npu==2.9.0
+transformers==4.57.1
+numpy==1.26.4
+safetensors==0.6.2

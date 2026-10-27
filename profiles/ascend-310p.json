@@ -1,0 +1,36 @@
+{
+  "profile_version": 1,
+  "status": "development_qualified",
+  "architecture": "aarch64",
+  "os": "Ubuntu 22.04",
+  "chip": "310P3",
+  "host_driver": "25.3.rc1",
+  "host_cann": "8.5.0",
+  "candidate_image": "quay.io/ascend/vllm-ascend@sha256:27405f9787f5ff16d3f10cfa56b3a567828de43bb60aeb0f025f0640fb8fdc28",
+  "candidate_image_tag": "v0.15.0rc1-310p",
+  "qualification_model": "Qwen/Qwen3-0.6B",
+  "device_ids": [
+    0
+  ],
+  "deployment_adapter": "direct_docker_qualification",
+  "gpustack_status": "not_runtime_certified",
+  "parameters": {
+    "dtype": "float16",
+    "max_model_len": 512,
+    "max_num_seqs": 1,
+    "tensor_parallel_size": 1,
+    "enforce_eager": true,
+    "enable_thinking": false,
+    "enable_prefix_caching": false,
+    "enable_chunked_prefill": false,
+    "enable_npugraph_ex": false
+  },
+  "notes": [
+    "The direct adapter isolates inference validation from scheduler integration.",
+    "GPUStack requires separate runtime and model deployment certification.",
+    "No capacity or production availability claim is made by this profile.",
+    "v0.14.0rc1-310p combinations failed answer-quality checks and are not qualified."
+  ],
+  "acceptance_schema": 3,
+  "qualification_report": "docs/v0.1验收报告.md"
+}

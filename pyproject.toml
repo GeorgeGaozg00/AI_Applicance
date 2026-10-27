@@ -1,0 +1,17 @@
+[project]
+name = "ai-appliance"
+version = "0.1.0"
+description = "Ascend appliance hardware and inference qualification tools"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+ai-appliance = "appliance.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["appliance*"]
+
